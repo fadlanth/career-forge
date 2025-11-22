@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masuk - Careerforge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0A2540",
+            "background-light": "#F6F9FC",
+            "background-dark": "#051220",
+            "card-light": "#FFFFFF",
+            "card-dark": "#0A2540",
+            "text-light": "#0A2540",
+            "text-dark": "#F6F9FC",
+            "subtle-text-light": "#6B778C",
+            "subtle-text-dark": "#A1ACC0",
+            "border-light": "#EAEAEA",
+            "border-dark": "#2C3E50",
+            "error": "#DE350B",
+            "link": "#4285F4",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
+<div class="w-full max-w-md">
+<!-- Logo -->
+<div class="mb-6 flex justify-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">work</span>
+<h1 class="text-3xl font-bold text-primary">Careerforge</h1>
+</div>
+</div>
+<!-- Card Container -->
+<div class="flex w-full flex-col overflow-hidden rounded-xl bg-card-light shadow-lg dark:bg-card-dark dark:border dark:border-border-dark">
+<!-- Tabs -->
+<div>
+<div class="flex border-b border-border-light dark:border-border-dark">
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-b-primary pb-[13px] pt-4 text-primary" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Masuk</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center border-b-[3px] border-b-transparent pb-[13px] pt-4 text-subtle-text-light dark:text-subtle-text-dark" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Daftar</p>
+</a>
+</div>
+</div>
+<div class="p-6 sm:p-8">
+<h2 class="mb-6 text-xl font-bold text-text-light dark:text-text-dark">Masuk ke Akun Anda</h2>
+<form class="flex flex-col gap-4">
+<!-- Email Field -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-text-light dark:text-text-dark">Email</p>
+<div class="flex w-full flex-1 items-stretch rounded-lg">
+<div class="flex items-center justify-center rounded-l-lg border border-r-0 border-border-light bg-background-light px-3.5 text-subtle-text-light dark:border-border-dark dark:bg-background-dark dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg border border-border-light bg-card-light p-3.5 text-sm font-normal leading-normal text-text-light placeholder:text-subtle-text-light focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 dark:border-border-dark dark:bg-card-dark dark:text-text-dark" placeholder="Masukkan email Anda" type="email" value=""/>
+</div>
+</label>
+<!-- Password Field with Error -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-text-light dark:text-text-dark">Password</p>
+<div class="flex w-full flex-1 items-stretch rounded-lg">
+<div class="flex items-center justify-center rounded-l-lg border border-r-0 border-border-light bg-background-light px-3.5 text-subtle-text-light dark:border-border-dark dark:bg-background-dark dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-xl">lock</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg border border-error bg-card-light p-3.5 text-sm font-normal leading-normal text-text-light placeholder:text-subtle-text-light focus:border-error focus:outline-none focus:ring-2 focus:ring-error/30 dark:border-error dark:bg-card-dark dark:text-text-dark" placeholder="Masukkan password Anda" type="password" value="password123"/>
+</div>
+<p class="mt-1.5 text-xs text-error">Password yang Anda masukkan salah.</p>
+</label>
+<!-- Forgot Password Link -->
+<div class="text-right">
+<a class="text-sm font-medium text-link hover:underline" href="#">Lupa Password?</a>
+</div>
+<!-- CTA Button (Loading state) -->
+<button class="flex h-12 items-center justify-center gap-2 rounded-lg bg-primary/80 px-4 py-2 text-base font-bold text-white transition-colors" disabled="">
+<svg class="h-5 w-5 animate-spin text-white" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span>Memproses...</span>
+</button>
+<!-- Separator -->
+<div class="flex items-center gap-4 py-2">
+<hr class="flex-grow border-t border-border-light dark:border-border-dark"/>
+<span class="text-xs font-medium text-subtle-text-light dark:text-subtle-text-dark">Atau masuk dengan</span>
+<hr class="flex-grow border-t border-border-light dark:border-border-dark"/>
+</div>
+<!-- Social Login Buttons -->
+<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+<button class="flex h-11 items-center justify-center gap-2 rounded-lg border border-border-light bg-card-light px-4 py-2 text-sm font-medium text-text-light transition-colors hover:bg-background-light dark:border-border-dark dark:bg-card-dark dark:text-text-dark dark:hover:bg-background-dark">
+<img alt="Google logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzP9oaI_dsiU8a9bc70O6kceeMK92Wx3POZERhQQRkyeoiLLLdhPGyvnhVJJB4mOF1FiBGFicXVaXjZ9ZR_0_ji7wZk6UpcOnG2Bc7ysfTQAzdhbrtZYt1Ecbz11e8ApAuAGDadADrOaIPH7Wszuq1WnIvozKoVplWLBEnyedcQS2uQeFZeCNdeGnBFJtIy2BGiFcSMkQFfTGcJ-1Vt1vG-XlihmmH2n3wVm2uXq39AMh-ptSJziLnt03R-EOnSfoBk-E94t3IHVuB"/>
+<span>Masuk dengan Google</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-lg border border-border-light bg-card-light px-4 py-2 text-sm font-medium text-text-light transition-colors hover:bg-background-light dark:border-border-dark dark:bg-card-dark dark:text-text-dark dark:hover:bg-background-dark">
+<svg aria-hidden="true" class="h-5 w-5 text-[#0077B5]" fill="currentColor" viewbox="0 0 24 24">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path>
+</svg>
+<span>Masuk dengan LinkedIn</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body></html>

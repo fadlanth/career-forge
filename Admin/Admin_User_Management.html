@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manajemen Siswa - Careerforge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4A90E2",
+            "background-light": "#F2F2F7",
+            "background-dark": "#1C1C1E",
+            "text-primary-light": "#1C1C1E",
+            "text-primary-dark": "#F2F2F7",
+            "text-secondary-light": "#8E8E93",
+            "text-secondary-dark": "#8E8E93",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#2C2C2E",
+            "border-light": "#E5E5EA",
+            "border-dark": "#3A3A3C",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex h-16 items-center border-b border-border-light bg-surface-light/80 px-4 backdrop-blur-sm dark:border-border-dark dark:bg-surface-dark/80 md:px-6">
+<button class="mr-4 flex h-10 w-10 items-center justify-center rounded-full text-text-secondary-light hover:bg-black/5 dark:text-text-secondary-dark dark:hover:bg-white/5 md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Manajemen Siswa</h1>
+</header>
+<main class="flex-1 p-4 md:p-6">
+<div class="mx-auto max-w-7xl space-y-6">
+<!-- Search and Filter Section -->
+<div class="flex flex-col gap-4 md:flex-row md:items-center">
+<!-- Search Bar -->
+<div class="flex-grow">
+<label class="relative flex w-full items-center">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 text-text-secondary-light dark:text-text-secondary-dark">search</span>
+<input class="form-input h-12 w-full rounded-lg border border-border-light bg-surface-light pl-10 pr-4 text-text-primary-light placeholder:text-text-secondary-light focus:border-primary focus:ring-2 focus:ring-primary/30 dark:border-border-dark dark:bg-surface-dark dark:text-text-primary-dark dark:placeholder:text-text-secondary-dark" placeholder="Cari berdasarkan nama atau email..." type="text"/>
+</label>
+</div>
+<!-- Filter Dropdown -->
+<div class="relative w-full md:w-auto md:min-w-[200px]">
+<select class="form-select h-12 w-full appearance-none rounded-lg border border-border-light bg-surface-light py-2 pl-4 pr-10 text-text-primary-light focus:border-primary focus:ring-2 focus:ring-primary/30 dark:border-border-dark dark:bg-surface-dark dark:text-text-primary-dark">
+<option>Semua Jurusan</option>
+<option>Teknik Informatika</option>
+<option>Desain Komunikasi Visual</option>
+<option>Manajemen Bisnis</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary-light dark:text-text-secondary-dark">expand_more</span>
+</div>
+</div>
+<!-- Data Table Section -->
+<div class="overflow-hidden rounded-lg border border-border-light bg-surface-light dark:border-border-dark dark:bg-surface-dark">
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-border-light dark:divide-border-dark">
+<thead class="bg-background-light dark:bg-background-dark">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark" scope="col">
+<div class="flex items-center gap-1">Nama <span class="material-symbols-outlined text-base">unfold_more</span></div>
+</th>
+<th class="hidden px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark lg:table-cell" scope="col">
+<div class="flex items-center gap-1">Email <span class="material-symbols-outlined text-base">unfold_more</span></div>
+</th>
+<th class="hidden px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark md:table-cell" scope="col">
+<div class="flex items-center gap-1">Jurusan <span class="material-symbols-outlined text-base">unfold_more</span></div>
+</th>
+<th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark" scope="col">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light dark:divide-border-dark">
+<!-- List Item 1 -->
+<tr>
+<td class="whitespace-nowrap px-6 py-4">
+<div class="flex items-center gap-3">
+<img class="h-10 w-10 rounded-full object-cover" data-alt="Avatar of Andika Pratama" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE8YUCSElIZgH9mVzkIzxvLNM_swq1xVXKdAp2Q9gcWVGnuPq1c38i72K_W4KN2d6B-rP5X5kMcm18tKSsEXVcZ9miqFE_y5J2DicUe1Hz0sIVu6GplH2Oky9FZCiGYAVQNmaEoa92JPGfaxjrrAPU7dfItHgdCiKz1tZNYg6pMXyHi4ZkQZXuoSTAeLdpAEwsS_hKNu-BF49UOXq11wLKW0ehFlheILM7xOQdKcsacrIv7_kMuuCc7c2A43c5ABcmcpLM9KQMqqJF"/>
+<div>
+<div class="font-medium text-text-primary-light dark:text-text-primary-dark">Andika Pratama</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark lg:hidden">andika.pratama@email.com</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark md:hidden">Teknik Informatika</div>
+</div>
+</div>
+</td>
+<td class="hidden whitespace-nowrap px-6 py-4 text-sm text-text-secondary-light dark:text-text-secondary-dark lg:table-cell">andika.pratama@email.com</td>
+<td class="hidden whitespace-nowrap px-6 py-4 text-sm text-text-secondary-light dark:text-text-secondary-dark md:table-cell">Teknik Informatika</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+<div class="flex items-center gap-3">
+<button class="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-primary/80">Lihat Profil</button>
+<button class="rounded bg-background-light px-3 py-1.5 text-xs font-semibold text-text-secondary-light shadow-sm ring-1 ring-inset ring-border-light hover:bg-black/5 dark:bg-background-dark dark:text-text-secondary-dark dark:ring-border-dark dark:hover:bg-white/5">Edit</button>
+</div>
+</td>
+</tr>
+<!-- List Item 2 -->
+<tr>
+<td class="whitespace-nowrap px-6 py-4">
+<div class="flex items-center gap-3">
+<img class="h-10 w-10 rounded-full object-cover" data-alt="Avatar of Citra Lestari" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvI0vUmCzHFAYdNeD6aeLbz-waKACYWNriv-wO7Th8p9qtFpYIyU4ac50oDmabJ7KFjvY94oLAsP9Mqu50eXliwvsfUDlF1AjW1J4b3pfXIxW1vTrDfOS17unmc5J4pXBMyY0xMB_gQGFgdkaHffhNXjCUAiAMhr-eWpELwmKPaZLEhg5BRfgwaWdUyERjVvd4cka_leO5BCY9Q0ae3FvEQqPfmJLvxgEiE2GWZlX6cf0RiowOX-zKhf6enNtXBDG8_mCrU_2xehI3"/>
+<div>
+<div class="font-medium text-text-primary-light dark:text-text-primary-dark">Citra Lestari</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark lg:hidden">citra.lestari@email.com</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark md:hidden">Desain Komunikasi Visual</div>
+</div>
+</div>
+</td>
+<td class="hidden whitespace-nowrap px-6 py-4 text-sm text-text-secondary-light dark:text-text-secondary-dark lg:table-cell">citra.lestari@email.com</td>
+<td class="hidden whitespace-nowrap px-6 py-4 text-sm text-text-secondary-light dark:text-text-secondary-dark md:table-cell">Desain Komunikasi Visual</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+<div class="flex items-center gap-3">
+<button class="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-primary/80">Lihat Profil</button>
+<button class="rounded bg-background-light px-3 py-1.5 text-xs font-semibold text-text-secondary-light shadow-sm ring-1 ring-inset ring-border-light hover:bg-black/5 dark:bg-background-dark dark:text-text-secondary-dark dark:ring-border-dark dark:hover:bg-white/5">Edit</button>
+</div>
+</td>
+</tr>
+<!-- List Item 3 -->
+<tr>
+<td class="whitespace-nowrap px-6 py-4">
+<div class="flex items-center gap-3">
+<img class="h-10 w-10 rounded-full object-cover" data-alt="Avatar of Budi Santoso" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiv0P_-1Ru5eDFQA0eFV7X1kr-TT-TfD_0jeUaiHLpQAhF8zTVikLAuHBh5zUQ5KUVbvxY2Smx0puPE8Ouh8rIHIPCeHVZ7S1Cx6Fands9aLXtKHJ4MIRwHEUWXsnx2CYcAtr1QkqeQKpJnierItyTJ6D53n2vSKiT-0JcbuwZHxs0-lTRR-umoodr90pbKAQ8o7casysTFChfl3SG7YdylmwpkrZz1vnmjs4emjoWuDxSSdosp15N4HHl4ZXinM6LvHRnLrnPMuo8"/>
+<div>
+<div class="font-medium text-text-primary-light dark:text-text-primary-dark">Budi Santoso</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark lg:hidden">budi.santoso@email.com</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark md:hidden">Manajemen Bisnis</div>
+</div>
+</div>
+</td>
+<td class="hidden whitespace-nowrap px-6 py-4 text-sm text-text-secondary-light dark:text-text-secondary-dark lg:table-cell">budi.santoso@email.com</td>
+<td class="hidden whitespace-nowrap px-6 py-4 text-sm text-text-secondary-light dark:text-text-secondary-dark md:table-cell">Manajemen Bisnis</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+<div class="flex items-center gap-3">
+<button class="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-primary/80">Lihat Profil</button>
+<button class="rounded bg-background-light px-3 py-1.5 text-xs font-semibold text-text-secondary-light shadow-sm ring-1 ring-inset ring-border-light hover:bg-black/5 dark:bg-background-dark dark:text-text-secondary-dark dark:ring-border-dark dark:hover:bg-white/5">Edit</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<nav aria-label="Pagination" class="flex items-center justify-between border-t border-border-light px-4 py-3 sm:px-6 dark:border-border-dark">
+<div class="hidden sm:block">
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Menampilkan <span class="font-medium">1</span> - <span class="font-medium">10</span> dari <span class="font-medium">97</span> hasil</p>
+</div>
+<div class="flex flex-1 justify-between sm:justify-end">
+<button class="relative inline-flex items-center rounded-md border border-border-light bg-surface-light px-4 py-2 text-sm font-medium text-text-secondary-light hover:bg-black/5 dark:border-border-dark dark:bg-surface-dark dark:text-text-secondary-dark dark:hover:bg-white/5">Sebelumnya</button>
+<button class="relative ml-3 inline-flex items-center rounded-md border border-border-light bg-surface-light px-4 py-2 text-sm font-medium text-text-secondary-light hover:bg-black/5 dark:border-border-dark dark:bg-surface-dark dark:text-text-secondary-dark dark:hover:bg-white/5">Berikutnya</button>
+</div>
+</nav>
+</div>
+</div>
+</main>
+</div>
+</body></html>

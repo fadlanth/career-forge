@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careerforge - Proyek Saya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0A4D68", // Dark Teal as primary
+            "secondary": "#FFA500", // Soft Orange for accents
+            "background-light": "#F8F9FA",
+            "background-dark": "#102219", // A dark background complementary to teal
+            "text-light": "#0d1b14", // Near-black for light mode text
+            "text-dark": "#F8F9FA", // Light gray for dark mode text
+            "text-muted-light": "#6c757d",
+            "text-muted-dark": "#a0aec0",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem", // Changed to 0.5rem for a softer look
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200/50 dark:border-white/10">
+<div class="text-text-light dark:text-text-dark flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">widgets</span>
+</div>
+<h1 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Proyek Saya</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-text-light dark:text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col justify-center">
+<div class="flex flex-col px-6 py-6">
+<div class="flex flex-col items-center gap-6 text-center">
+<div class="bg-center bg-no-repeat aspect-square bg-contain rounded-lg w-full max-w-[280px]" data-alt="An abstract illustration of a person arranging building blocks, symbolizing the process of building a portfolio." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3uGMHnK6kHqHkp0E10jvxhUA_M5QNQzJYI8P_eheabKhO5wQDtsAXFicrdvC9ezIz0-6xQHD0Dmggv9H2oRaWr6IoYgRrcgrWOnuaezJLvUtpyaOUXCvVBbWKqMk2X3ZZDFKBlJuyJNRqoOt9KM8cJoV3D_CN358oXNCFjJag_TMrJeasBS2y81iO5b_lktPMBeU_QE-uaNM1SJ3sFvAzCGxtMy40lpfDLrP1-HEYNn7-9oOELs6IF3MGi5jZ9Es-Ab_q5F20_k6h");'></div>
+<div class="flex max-w-md flex-col items-center gap-2">
+<p class="text-primary dark:text-secondary text-xl font-bold leading-tight tracking-[-0.015em]">Portofolio Proyek Anda Masih Kosong</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">
+              Pamerkan hasil kerja terbaik Anda di sini. Tambahkan proyek pertama Anda untuk menarik perhatian perekrut.
+            </p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] gap-2 shadow-lg shadow-primary/30 hover:bg-opacity-90 transition-all">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="truncate">+ Tambah Proyek Baru</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<footer class="sticky bottom-0 z-10">
+<div class="flex gap-2 border-t border-gray-200/50 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-muted-light dark:text-text-muted-dark" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-primary dark:text-secondary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">business_center</span>
+</div>
+<p class="text-xs font-bold leading-normal tracking-[0.015em]">Proyek</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-muted-light dark:text-text-muted-dark" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Pengalaman</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-muted-light dark:text-text-muted-dark" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profil</p>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

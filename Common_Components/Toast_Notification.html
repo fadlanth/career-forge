@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careerforge - Toast Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec80",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102219",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative w-full min-h-screen p-4 sm:p-6 lg:p-8 flex flex-col items-center">
+<div class="absolute top-6 right-6 w-full max-w-sm flex flex-col items-end gap-3 z-50">
+<!-- Toast Notification - Success -->
+<div class="w-full max-w-sm bg-[#eaf7f1] dark:bg-[#1a3a29] rounded-xl shadow-lg ring-1 ring-black/5 overflow-hidden">
+<div class="relative flex items-start gap-4 p-4">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-[#28a745] text-2xl">check_circle</span>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-semibold text-[#1a3a29] dark:text-[#d3ede1]">Sukses</p>
+<p class="text-sm text-[#3d5a4a] dark:text-[#b4d6c7]">Proyek berhasil ditambahkan ke portofolio.</p>
+</div>
+<div class="flex-shrink-0">
+<button class="text-[#6c867a] dark:text-[#95b0a3] hover:text-[#3d5a4a] dark:hover:text-[#d3ede1]">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<div class="h-1 bg-[#d1e8de] dark:bg-[#1e4832]">
+<div class="h-1 bg-[#28a745]" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Toast Notification - Info -->
+<div class="w-full max-w-sm bg-[#e6f2ff] dark:bg-[#122a47] rounded-xl shadow-lg ring-1 ring-black/5 overflow-hidden">
+<div class="relative flex items-start gap-4 p-4">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-[#007bff] text-2xl">info</span>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-semibold text-[#003e80] dark:text-[#d1e7ff]">Info</p>
+<p class="text-sm text-[#20589a] dark:text-[#a8cfff]">Tautan portofolio telah disalin ke clipboard.</p>
+</div>
+<div class="flex-shrink-0">
+<button class="text-[#6698d2] dark:text-[#8ab9f3] hover:text-[#20589a] dark:hover:text-[#d1e7ff]">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<div class="h-1 bg-[#d1e5ff] dark:bg-[#1b3d6a]">
+<div class="h-1 bg-[#007bff]" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Toast Notification - Warning -->
+<div class="w-full max-w-sm bg-[#fff8e6] dark:bg-[#473812] rounded-xl shadow-lg ring-1 ring-black/5 overflow-hidden">
+<div class="relative flex items-start gap-4 p-4">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-[#ffc107] text-2xl">warning</span>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-semibold text-[#806004] dark:text-[#ffeecd]">Peringatan</p>
+<p class="text-sm text-[#9a7821] dark:text-[#ffdca2]">Perubahan pada bagian 'Pengalaman' belum disimpan.</p>
+</div>
+<div class="flex-shrink-0">
+<button class="text-[#cc9a06] dark:text-[#f8d47b] hover:text-[#806004] dark:hover:text-[#ffeecd]">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<div class="h-1 bg-[#ffeecb] dark:bg-[#6a541b]">
+<div class="h-1 bg-[#ffc107]" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Toast Notification - Error -->
+<div class="w-full max-w-sm bg-[#fdeded] dark:bg-[#471a1f] rounded-xl shadow-lg ring-1 ring-black/5 overflow-hidden">
+<div class="relative flex items-start gap-4 p-4">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-[#dc3545] text-2xl">cancel</span>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-semibold text-[#6e1a23] dark:text-[#fbd5d9]">Gagal</p>
+<p class="text-sm text-[#9b3a44] dark:text-[#f7b6bc]">Gagal mengunggah foto. Silakan coba lagi.</p>
+</div>
+<div class="flex-shrink-0">
+<button class="text-[#b05d66] dark:text-[#f3a0a8] hover:text-[#6e1a23] dark:hover:text-[#fbd5d9]">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<div class="h-1 bg-[#fbd5d9] dark:bg-[#6b282e]">
+<div class="h-1 bg-[#dc3545]" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<div class="text-center mt-96 pt-20">
+<h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Careerforge Toast Notifications</h1>
+<p class="text-gray-600 dark:text-gray-400 mt-2">Contoh tampilan notifikasi untuk berbagai status.</p>
+</div>
+</div>
+</body></html>

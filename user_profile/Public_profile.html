@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profil Siswa - Careerforge</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0A7C8A",
+            "secondary": "#FFB84C",
+            "background-light": "#F5F5F5",
+            "background-dark": "#1a1a1a",
+            "text-light": "#333333",
+            "text-dark": "#F5F5F5",
+            "card-light": "#FFFFFF",
+            "card-dark": "#2a2a2a",
+            "border-light": "#E0E0E0",
+            "border-dark": "#424242"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style type="text/tailwindcss">
+    @layer utilities {
+      body {
+        @apply font-display bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark;
+      }
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden">
+<!-- Hero Section with Gradient -->
+<div class="relative w-full bg-gradient-to-br from-[#0A7C8A] to-[#575fcf] p-4 pt-16 text-white">
+<!-- TopAppBar Placeholder -->
+<div class="absolute top-0 left-0 right-0 flex items-center p-4 justify-between bg-transparent">
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Careerforge</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-white/20 text-white">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- ProfileHeader -->
+<div class="flex w-full flex-col gap-4 items-center pt-8 pb-4">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-white/50" data-alt="Foto profil siswa" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPK38qLzLSMhKgbU6QHvUGoP59qbcz30RSnelptErzEonV4Bywq4Cq8q18X7hgabZBafJKqo8nZU314ri0sYIrBpfzsLo06qn-EiqO5X631lD-uXefAKQCN7Zc8CTiWpVHyyXX1UnpqskSPTTcgTBk9n1H2YF3_VWmSYY6wz6RN1LiG7F2C8vdqCrDdLzUvMy8VoAp88g7Jmdg66o04MHzGJmvFkLCesfiLaD0K2nZ3SaGS7E6Jf3oaPaAQAXbMR9StD--cAkCV96S");'></div>
+<div class="flex flex-col items-center justify-center text-center">
+<p class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Andini Putri</p>
+<p class="text-white/80 text-base font-normal leading-normal">Teknik Informatika</p>
+<p class="text-white/80 text-base font-normal leading-normal max-w-md mt-2">Seorang pengembang web front-end yang bersemangat dalam menciptakan pengalaman pengguna yang intuitif dan menarik secara visual.</p>
+</div>
+</div>
+<div class="flex w-full max-w-md gap-3 pt-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-4 bg-white/20 text-white text-sm font-bold leading-normal tracking-[0.015em] flex-1 hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span class="truncate">Unduh CV</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-4 bg-white text-primary text-sm font-bold leading-normal tracking-[0.015em] flex-1 hover:bg-white/90 transition-colors">
+<span class="material-symbols-outlined text-base">send</span>
+<span class="truncate">Kontak</span>
+</button>
+</div>
+</div>
+</div>
+<main class="w-full max-w-4xl mx-auto px-4 py-8 space-y-12">
+<!-- Skills Section -->
+<section>
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-4">Keahlian Saya</h2>
+<div class="flex gap-3 flex-wrap">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">JavaScript (Ahli)</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-secondary/20 px-4">
+<p class="text-secondary text-sm font-medium leading-normal">Figma (Menengah)</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">React (Ahli)</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-500/10 px-4">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Python (Pemula)</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">Node.js (Ahli)</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-secondary/20 px-4">
+<p class="text-secondary text-sm font-medium leading-normal">SQL (Menengah)</p>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section>
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-4">Proyek Unggulan</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Project Card 1 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark transition-shadow hover:shadow-lg">
+<img class="aspect-[16/9] w-full object-cover" data-alt="Thumbnail proyek sistem manajemen tugas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAouKiA8gh290CHfS38KpvGSolpwT6Pqw6fVnVSK4PJTX2LV90MtfMRsfYUsIh9AEMrx9lLdziOTsg_sb76ab1-exlhDOu4gy534oRvG_auelPb2-triuc3kA6SRPBe34TWrSL8zH40oBtPAmYE2ewRbLcRhT_5nGEicamBkGx2qzwCAQM6lheAEmAcZWi7FpQuZyslIsCPbeaIDktoJf7Dj0oqm-nhPzttcSOkLUzfZtoce7z_ZTKS5hvg3pa_y30y28mbidRizyt3"/>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark">Sistem Manajemen Tugas</h3>
+<p class="text-sm text-text-light/80 dark:text-text-dark/80 mt-1 flex-1">Platform kolaboratif untuk tim melacak, mengelola, dan menyelesaikan tugas proyek secara efisien.</p>
+<div class="flex gap-2 flex-wrap mt-4">
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">React</span>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">Node.js</span>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">MongoDB</span>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold mt-5 self-start hover:underline" href="#">
+                Lihat Proyek
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark transition-shadow hover:shadow-lg">
+<img class="aspect-[16/9] w-full object-cover" data-alt="Thumbnail proyek dashboard analitik" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhtz2J0fTupLQOytPhPuCXYUzeF7wM1rADnnJJK6huRXzR3MDwUTmpo_rDXakFigW-R_yNQY8qoBJAeG7JSUbRFfBvWUhDBIsk7FfkMMOVc7ITKSOwUteNficvNX56MajWHdYjX7hjW8nC8qoddgvryL9PXP2lHL_hhcRHn-lbPwM2xj0zHt00tHyC4X37p6hmXzKtIL2yZOKzma3fadbA_n4TmpUT1kTPD8njiYu_nMggOiE4HAfKJAGI6JaKpVTlDh2ndMpuuIz_"/>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark">Dashboard Analitik</h3>
+<p class="text-sm text-text-light/80 dark:text-text-dark/80 mt-1 flex-1">Aplikasi web yang menampilkan visualisasi data interaktif untuk analisis tren penjualan dan performa bisnis.</p>
+<div class="flex gap-2 flex-wrap mt-4">
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">Vue.js</span>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">D3.js</span>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">Python</span>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold mt-5 self-start hover:underline" href="#">
+                Lihat Proyek
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section>
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-4">Sertifikat &amp; Penghargaan</h2>
+<div class="relative">
+<div class="flex overflow-x-auto space-x-4 pb-4 snap-x snap-mandatory">
+<!-- Certification Card 1 -->
+<div class="snap-start shrink-0">
+<img class="w-64 h-44 object-cover rounded-lg cursor-pointer" data-alt="Sertifikat front end development" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa0zn8VGvsllgAf0rSQnR8NVQyIWOSmuz9Zns9R3Cu8W0WxnCinQtaKd3QI3_3NRbsbuJhopv8MFuhei7Hht6kzWbdjTfDw0_W3-7KwGmrAhd7BBj7ZtMr9F32czqp9Iai4bJFnbA8rOB_KPrfGrnXcBElaPsCo2vLTcKIRnBic2MctfnnnIKPTIV1WFNXEDJR8nKdw3qYFebNfwUv3Z2_YHESYjBZyoU-FvJsCwVWLOqoaG8t8Ps6TTOavd1GtKbFPO8koVWRIykj"/>
+</div>
+<!-- Certification Card 2 -->
+<div class="snap-start shrink-0">
+<img class="w-64 h-44 object-cover rounded-lg cursor-pointer" data-alt="Sertifikat python for data science" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklO8nSADO053vMa-oyjCKLnBPHICBabJJFNl5Up-2GMtsnVMMh3UpidgVl1N0KEGZmr8hnIhN8weyULQh64VYmLFKzdyroCGU4ASg4Np5qCD4W9DC9LW73Tha_9VoPWM_63Fcyw8nGKXUxJXBaWndiXEHVvKjBjnF9rxsDS2Rd4CYZa4iu6fGIVCHn4l2tKenLss7Foee-bvE-QJB1hJ6NCXCCz1DnNhgdoE5wXlYr-f2UpREXJ5Jq-YXXUFs0BIRpwPhonOCwjyW"/>
+</div>
+<!-- Certification Card 3 -->
+<div class="snap-start shrink-0">
+<img class="w-64 h-44 object-cover rounded-lg cursor-pointer" data-alt="Sertifikat UI/UX design fundamentals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBprcQNWjND4kDHE8WArA82aEQIN-57WA_9BKmlZDDRBJYl7eB9InwwOMQ2eArAerHiypFSyQ_FS3KELF79Dyl0fZlFJpAwaVjTI5oQKLX1_W31mUr2VOGrty_mL7FKj-AylsQIiqCwOvHwDbGvUTttitl8AE5GljhwsQ4LxlJMPRhl_fJQfwDO1AvkPg-QGh6f_Dhu6p0SVhydi9ne7DCSSnME8dRLsfGEGzLToEv4-FQAK_7p9WQTuMnmWodWU7JmcuyHx4IPdLi9"/>
+</div>
+<!-- Certification Card 4 -->
+<div class="snap-start shrink-0">
+<img class="w-64 h-44 object-cover rounded-lg cursor-pointer" data-alt="Sertifikat project management" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYtKNFpNeiLa8rrQq48tH27Nq6Osgs3DyVJqb6uHtg6s76BrkX1unvwfawEuDwZLG6lsvcYnwuz9sHjEEmjiD9hX2vOx1X4bLJqH60_3YAMQCVHtC2nBgvMOli7tH86E4T4ohjhbYVqn-eMEXC_7SzfWIgRAYGaorHbfsuJgfq6KR2zBAXCedibmjBfNfD0_tLnj4hBz4bKYlV2BJQworZqKIUe1o67j8njz1LD8UZceKMJNbelaDsTjL4avuCmmKTIDKsk3zEYsWm"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proyekku - Careerforge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#14B8A6", // Teal
+            "background-light": "#F3F4F6",
+            "background-dark": "#111827", // Dark Gray-Blue
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#1F2937", // Slightly lighter dark
+            "text-primary-light": "#1F2937",
+            "text-primary-dark": "#F9FAFB",
+            "text-secondary-light": "#6B7280",
+            "text-secondary-dark": "#9CA3AF",
+            "danger": "#EF4444",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col" id="app-container">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200 dark:border-gray-700 bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
+<h1 class="text-xl font-bold tracking-tight">Proyekku</h1>
+<button class="flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-teal-600">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="truncate hidden sm:inline">Tambah Proyek Baru</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 p-4">
+<!-- Case 1: Projects Exist -->
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" id="project-grid">
+<!-- Project Card 1 -->
+<div class="flex flex-col overflow-hidden rounded-lg bg-surface-light dark:bg-surface-dark shadow-sm ring-1 ring-black/5 dark:ring-white/10">
+<div class="w-full bg-cover bg-center aspect-video" data-alt="Screenshot of a mobile application design with vibrant colors." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGtE-wPxCo74u9Knkcy9hQCK9i_FG8yerGAcEKe4uSM4ggk5IHSoTdVWJtbir29e-yM24eVfNiICTr90OKC6QjZ3xqGSup89RdO-CSmwTLTd5ywG76nN8b24SL7SZMSWiZhcV_EcrX8M2ylpvZk_KoXsfvi6n2ql_teX-wlFTR2nqzbpgesEiVhIsgo_wtY5jQK3EAg7WOLTmua-gdoRcAFCJGQjDH8XuvCop1Nz--wzPBzBgx6b1JnO6V7Q4vv_kNOMY9nobKlgCV');"></div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold leading-tight">Desain Aplikasi Mobile "FinTrack"</h3>
+<p class="mt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark flex-1">Sebuah aplikasi untuk manajemen tugas dan keuangan harian.</p>
+<div class="mt-4 flex items-center justify-end gap-2">
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-text-secondary-light dark:text-text-secondary-dark transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-danger transition-colors hover:bg-danger/10">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="flex flex-col overflow-hidden rounded-lg bg-surface-light dark:bg-surface-dark shadow-sm ring-1 ring-black/5 dark:ring-white/10">
+<div class="w-full bg-cover bg-center aspect-video" data-alt="Abstract code on a dark screen representing a web development project." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRfwfvZb6_FTNEf1i2XeWtwNNrd_fhgNBTrpGin43ytOjT1zBk889dQEg72f2WrHQ8rlmIgp3BXjN5kLUMdchoCni3CfrxBfEqJmvcYCS1gP5Bvn18qGdnlo-w4xTOcDjCR8HeY0ifsbsrSCNMoqMeeKO8wFUWgU63fXYCY50ahj70CDISWRpckeTqdc7r8Wwwfts22iPqD_SyJcjdT3mTJeOJpm5ZqM6siI6yYAx8ULOF73FYglVJG0HLY6ImoKu8vUa7DXoyqYlO');"></div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold leading-tight">Website E-commerce "UrbanThreads"</h3>
+<p class="mt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark flex-1">Platform online untuk menjual produk fashion urban dan modern.</p>
+<div class="mt-4 flex items-center justify-end gap-2">
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-text-secondary-light dark:text-text-secondary-dark transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-danger transition-colors hover:bg-danger/10">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="flex flex-col overflow-hidden rounded-lg bg-surface-light dark:bg-surface-dark shadow-sm ring-1 ring-black/5 dark:ring-white/10">
+<div class="w-full bg-cover bg-center aspect-video" data-alt="Laptop showing charts and graphs for data analysis." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBr5-PUlDJEeIFhGwFOAw1JbficdE3-Zp7086DkyLFpOZGiuzXujkw_7nqWEyLT-KnFcxTbYvKdP_Z_kWUyCYBqWoC_ul8oA57R9yRsERhPcbVkQ7zu3BQZ9NKdhFF1bVzt4jeToKpSQn08FUvMRF_t8aCs4Hx1e1H87IHlJNNuLi2WCoLA2Ab89Vd4iujafMeE2OjBmvHf1QyEUmhZpinv0MQ_9Cqfrr8nTG6cSOqWhvFV2vXaZoqGU66u7oMioYnJxtZsxjbnGVHa');"></div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold leading-tight">Analisis Data Penjualan Kuartal</h3>
+<p class="mt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark flex-1">Visualisasi data penjualan selama kuartal terakhir menggunakan Python dan Tableau.</p>
+<div class="mt-4 flex items-center justify-end gap-2">
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-text-secondary-light dark:text-text-secondary-dark transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-danger transition-colors hover:bg-danger/10">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="flex flex-col overflow-hidden rounded-lg bg-surface-light dark:bg-surface-dark shadow-sm ring-1 ring-black/5 dark:ring-white/10">
+<div class="w-full bg-cover bg-center aspect-video" data-alt="UX design wireframes and sticky notes on a board." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnPdOqtyylDm1W7d6ZI0yDX78y1exvmHQtZBwk5efk-dONPZ3kj6jFMUG655ts1fJGsruCcMsztLem_P2DrO6p1x6SOeg5UVJ9OVuUGwDbdCXHbttVbRwEFOw-XeDT-DFpkCZ2eQ8xCBFYrrk-x51bF2yqRIzOwy4P4OZ_d_zwAOGVpXge8Y9P19u6M8LzY_rvnSlS4h_ZbvrWclI_xu4rqun7xisSdSartBsekaFZuwsyOHkR2hhxqUm3hg2-BhfPxBACqawZzLhY');"></div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="text-base font-bold leading-tight">Studi Kasus UX Aplikasi Travel</h3>
+<p class="mt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark flex-1">Meningkatkan pengalaman pengguna pada alur pemesanan tiket di aplikasi travel.</p>
+<div class="mt-4 flex items-center justify-end gap-2">
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-text-secondary-light dark:text-text-secondary-dark transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-danger transition-colors hover:bg-danger/10">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Case 2: Empty State (uncomment to see) -->
+<!--
+      <div id="empty-state" class="flex flex-col items-center justify-center text-center py-16 px-4">
+        <div class="w-full max-w-xs">
+          <img src="https://storage.googleapis.com/builder-production-511059/1715893952792.svg" alt="Illustration of a person building something with blocks, representing creating a new project." class="w-full h-auto">
+        </div>
+        <div class="mt-8 flex max-w-md flex-col items-center gap-2">
+          <p class="text-lg font-bold tracking-tight">Mulai Bangun Portofoliomu</p>
+          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Yuk, tambahkan proyek pertamamu untuk menunjukkan keahlianmu kepada dunia!</p>
+        </div>
+        <button class="mt-6 flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide transition-colors hover:bg-teal-600">
+          <span class="material-symbols-outlined">add_circle</span>
+          <span class="truncate">Tambah Proyek Pertama</span>
+        </button>
+      </div>
+      -->
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="sticky bottom-0 z-10 border-t border-gray-200 dark:border-gray-700 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
+<nav class="flex justify-around p-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-text-secondary-light dark:text-text-secondary-dark transition-colors hover:text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium tracking-wide">Beranda</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full p-2 text-primary bg-primary/10" href="#">
+<span class="material-symbols-outlined">auto_awesome_mosaic</span>
+<p class="text-xs font-bold tracking-wide">Proyekku</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-text-secondary-light dark:text-text-secondary-dark transition-colors hover:text-primary" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<p class="text-xs font-medium tracking-wide">Pesan</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-text-secondary-light dark:text-text-secondary-dark transition-colors hover:text-primary" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium tracking-wide">Profil</p>
+</a>
+</nav>
+</footer>
+</div>
+</body></html>

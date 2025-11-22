@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tambah Sertifikat - Careerforge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ec80",
+            "background-light": "#f6f8f7",
+            "background-dark": "#102219",
+            "text-light": "#0d1b14",
+            "text-dark": "#e8f3ee",
+            "border-light": "#cfe7db",
+            "border-dark": "#2a4a3a",
+            "input-bg-light": "#f8fcfa",
+            "input-bg-dark": "#1a2e24",
+            "placeholder-light": "#4c9a73",
+            "placeholder-dark": "#7b9c8c",
+            "secondary-button-bg-light": "#e7f3ed",
+            "secondary-button-bg-dark": "#2a4a3a",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center p-4 pb-2 justify-between sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<button class="text-text-light dark:text-text-dark flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Tambah Sertifikat</h1>
+</header>
+<main class="flex flex-col flex-1 px-4 py-3">
+<div class="flex flex-col max-w-lg w-full mx-auto flex-1">
+<div class="flex flex-col gap-6 py-4">
+<!-- Text Field: Nama Penerbit -->
+<label class="flex flex-col w-full">
+<p class="text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">Nama Penerbit Sertifikat</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-input-bg-light dark:bg-input-bg-dark h-14 placeholder:text-placeholder-light dark:placeholder:text-placeholder-dark p-[15px] text-base font-normal leading-normal transition-shadow" placeholder="contoh: Google, Coursera" value=""/>
+</label>
+<!-- Text Field: Tanggal Terbit -->
+<label class="flex flex-col w-full">
+<p class="text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">Tanggal Terbit</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-input-bg-light dark:bg-input-bg-dark h-14 placeholder:text-placeholder-light dark:placeholder:text-placeholder-dark p-[15px] text-base font-normal leading-normal transition-shadow pr-12" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="Pilih Tanggal" type="text"/>
+<div class="absolute right-0 top-0 h-14 text-placeholder-light dark:text-placeholder-dark flex items-center justify-center px-4 pointer-events-none">
+<span class="material-symbols-outlined text-2xl">calendar_today</span>
+</div>
+</div>
+</label>
+<!-- Text Field: Link Verifikasi -->
+<label class="flex flex-col w-full">
+<p class="text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">Link Verifikasi</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-input-bg-light dark:bg-input-bg-dark h-14 placeholder:text-placeholder-light dark:placeholder:text-placeholder-dark p-[15px] text-base font-normal leading-normal transition-shadow" placeholder="https://sertifikat.com/id-unik" type="url" value=""/>
+</label>
+</div>
+<!-- Spacer to push buttons to the bottom -->
+<div class="flex-grow"></div>
+<!-- Button Group -->
+<div class="flex flex-col gap-3 py-4 sticky bottom-0 bg-background-light dark:bg-background-dark">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-text-light text-base font-bold leading-normal tracking-[0.015em] w-full transition-transform active:scale-95 hover:brightness-110">
+<span class="truncate">Simpan</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-secondary-button-bg-light dark:bg-secondary-button-bg-dark text-text-light dark:text-text-dark text-base font-bold leading-normal tracking-[0.015em] w-full transition-transform active:scale-95 hover:bg-black/5 dark:hover:bg-white/5">
+<span class="truncate">Batal</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

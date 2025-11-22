@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daftar - Careerforge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec80",
+              "background-light": "#f6f8f7",
+              "background-dark": "#102219",
+              "neutral-text-light": "#0d1b14",
+              "neutral-text-dark": "#e0e4e2",
+              "card-light": "#ffffff",
+              "card-dark": "#152d21",
+              "border-light": "#cfe7db",
+              "border-dark": "#2a4b3a",
+              "placeholder-light": "#4c9a73",
+              "placeholder-dark": "#8fa89c",
+              "error": "#ef4444"
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem", 
+                "lg": "0.5rem", 
+                "xl": "0.75rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 group/design-root overflow-x-hidden">
+<div class="w-full max-w-md">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg overflow-hidden">
+<div class="p-6 sm:p-8">
+<div class="text-center">
+<h1 class="text-neutral-text-light dark:text-neutral-text-dark tracking-tight text-3xl font-bold leading-tight">Mulai Karirmu</h1>
+<p class="text-neutral-text-light dark:text-neutral-text-dark/80 text-base font-normal leading-normal pt-2">Buat akun baru untuk memulai perjalanan karirmu</p>
+</div>
+<div class="mt-6">
+<div class="flex border-b border-border-light dark:border-border-dark justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-placeholder-light dark:text-placeholder-dark pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Masuk</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-neutral-text-light dark:text-neutral-text-dark pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Daftar</p>
+</a>
+</div>
+</div>
+<form class="space-y-4 mt-6">
+<div class="flex flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-neutral-text-light dark:text-neutral-text-dark text-base font-medium leading-normal pb-2">Alamat Email</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-neutral-text-light dark:text-neutral-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark h-14 placeholder:text-placeholder-light dark:placeholder:text-placeholder-dark p-[15px] text-base font-normal leading-normal" placeholder="masukkan email anda" type="email" value=""/>
+</label>
+</div>
+<div class="flex flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-neutral-text-light dark:text-neutral-text-dark text-base font-medium leading-normal pb-2">Kata Sandi</p>
+<div class="flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-neutral-text-light dark:text-neutral-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark h-14 placeholder:text-placeholder-light dark:placeholder:text-placeholder-dark p-[15px] pr-2 text-base font-normal leading-normal border-r-0" placeholder="minimal 8 karakter" type="password" value="secretpassword"/>
+<div class="text-placeholder-light dark:text-placeholder-dark flex border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark items-center justify-center px-[15px] rounded-r-lg border-l-0">
+<span class="material-symbols-outlined" data-icon="Eye">visibility</span>
+</div>
+</div>
+<p class="text-error text-sm font-normal pt-1.5">Kata sandi harus minimal 8 karakter</p>
+</label>
+</div>
+<div class="flex flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-neutral-text-light dark:text-neutral-text-dark text-base font-medium leading-normal pb-2">Ulangi Kata Sandi</p>
+<div class="flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-neutral-text-light dark:text-neutral-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-error bg-background-light dark:bg-background-dark h-14 placeholder:text-placeholder-light dark:placeholder:text-placeholder-dark p-[15px] pr-2 text-base font-normal leading-normal border-r-0" placeholder="ulangi kata sandi" type="password" value="anotherpassword"/>
+<div class="text-placeholder-light dark:text-placeholder-dark flex border border-error bg-background-light dark:bg-background-dark items-center justify-center px-[15px] rounded-r-lg border-l-0">
+<span class="material-symbols-outlined" data-icon="Eye">visibility_off</span>
+</div>
+</div>
+<p class="text-error text-sm font-normal pt-1.5">Kata sandi tidak cocok</p>
+</label>
+</div>
+<div class="pt-4">
+<button class="flex w-full items-center justify-center rounded-lg bg-primary h-14 text-center" type="submit">
+<p class="text-neutral-text-light text-base font-bold leading-normal">Daftar</p>
+</button>
+</div>
+<div class="pt-2">
+<button class="flex w-full items-center justify-center rounded-lg bg-primary/80 h-14 text-center cursor-not-allowed" type="submit">
+<svg class="animate-spin h-5 w-5 text-neutral-text-light" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</button>
+</div>
+</form>
+<p class="text-center text-xs text-placeholder-light dark:text-placeholder-dark pt-6">Dengan mendaftar, Anda menyetujui <a class="font-medium text-primary/80 hover:underline" href="#">Syarat &amp; Ketentuan</a> dan <a class="font-medium text-primary/80 hover:underline" href="#">Kebijakan Privasi</a> kami.</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

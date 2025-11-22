@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Mahasiswa - Careerforge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#008080", 
+                        "primary-accent": "#FFA500",
+                        "background-light": "#F7F9FA",
+                        "background-dark": "#102219",
+                        "text-primary-light": "#1A1A1A",
+                        "text-secondary-light": "#555555",
+                        "text-primary-dark": "#E0E0E0",
+                        "text-secondary-dark": "#A0A0A0",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1A2C23",
+                        "border-light": "#EAECEE",
+                        "border-dark": "#304038",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden pb-28">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-3 backdrop-blur-sm">
+<h1 class="flex-1 text-xl font-bold tracking-tight text-text-primary-light dark:text-text-primary-dark">Halo, John!</h1>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</header>
+<main class="flex flex-col gap-5 px-4">
+<!-- Lihat Profil Publik Button -->
+<div class="flex">
+<button class="flex h-12 flex-1 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-tight text-white">
+<span class="material-symbols-outlined">visibility</span>
+<span class="truncate">Lihat Profil Publik</span>
+</button>
+</div>
+<!-- Profile Completion Card -->
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-surface-light p-4 shadow-sm dark:bg-surface-dark">
+<div class="flex flex-col items-stretch justify-center gap-3">
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Kelengkapan Profil</p>
+<p class="text-sm font-semibold text-primary-accent">75% Lengkap</p>
+</div>
+<div class="h-2 rounded-full bg-border-light dark:bg-border-dark">
+<div class="h-2 rounded-full bg-primary-accent" style="width: 75%;"></div>
+</div>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Lengkapi profil Anda untuk menarik perhatian perekrut.</p>
+<button class="mt-1 flex h-9 w-fit cursor-pointer items-center justify-center self-end overflow-hidden rounded-lg bg-primary/10 px-4 text-sm font-bold text-primary dark:bg-primary/20 dark:text-primary-accent/90">
+<span class="truncate">Lengkapi Profil</span>
+</button>
+</div>
+</div>
+<!-- Statistics Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-surface-light p-4 dark:border-border-dark dark:bg-surface-dark">
+<p class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Kunjungan Profil</p>
+<p class="text-2xl font-bold tracking-tight text-text-primary-light dark:text-text-primary-dark">124</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-surface-light p-4 dark:border-border-dark dark:bg-surface-dark">
+<p class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Jumlah Proyek</p>
+<p class="text-2xl font-bold tracking-tight text-text-primary-light dark:text-text-primary-dark">12</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-surface-light p-4 dark:border-border-dark dark:bg-surface-dark">
+<p class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Koneksi</p>
+<p class="text-2xl font-bold tracking-tight text-text-primary-light dark:text-text-primary-dark">89</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-surface-light p-4 dark:border-border-dark dark:bg-surface-dark">
+<p class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Skill Terverifikasi</p>
+<p class="text-2xl font-bold tracking-tight text-text-primary-light dark:text-text-primary-dark">15</p>
+</div>
+</div>
+<!-- Recent Projects Section -->
+<div class="flex flex-col gap-4">
+<h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Proyek Terkini</h2>
+<!-- Project Item 1 -->
+<div class="flex items-start gap-4 rounded-xl border border-border-light bg-surface-light p-4 shadow-sm dark:border-border-dark dark:bg-surface-dark">
+<div class="h-16 w-16 shrink-0 rounded-lg bg-center bg-no-repeat bg-cover" data-alt="Project thumbnail showing a mobile app design" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcilI5hNchpX8bVt7YqQDSBDLplPNSUH_457cL1eAQmDv9opnnSplFLLxwVfByS9CSBxgTGP0W0gmbBqn23XdlVJKoO9XmfjSSgKS3NAOVXqsZabWooNCdfW9qvAf2E_0tAI71f80xGXQoBaJPg0mGiUBBmFQspZ3ANkpiY6UVhizLA67cUCaPEcVL3HGenQfzdL_mUD1i4v57SUfWKrU9TUsT81A1tTtjALDkSdjgZ-H3edpdXSmL-DQr2lh8RCqp8C6hQgCigUQx");'></div>
+<div class="flex flex-col">
+<p class="font-bold text-text-primary-light dark:text-text-primary-dark">Desain Aplikasi Mobile E-commerce</p>
+<p class="mt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark line-clamp-2">Merancang antarmuka pengguna yang intuitif untuk aplikasi belanja online.</p>
+</div>
+</div>
+<!-- Project Item 2 -->
+<div class="flex items-start gap-4 rounded-xl border border-border-light bg-surface-light p-4 shadow-sm dark:border-border-dark dark:bg-surface-dark">
+<div class="h-16 w-16 shrink-0 rounded-lg bg-center bg-no-repeat bg-cover" data-alt="Project thumbnail showing data visualizations" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0ZOG1HMZl2Cr4WxJefZ9mzPuDl_k6IFQaSRFOfxCo24Cj_C_u7Lz3wlGvUanFcpqHNqrmac8g4TLYBw4j1T_TLrF7R7IbqXC4pqZKEOBpZCZsbUpRFOHmVSH2QJkGVL2WfnPw_2bOpUoGCVAp3aWT8-CrHmRkkKMIswR1BM0VwKX95arxMn-_dGnXwfpFLXJt5H_T8x8XtIPu3n9hAX46CjoQXfL_NnnQ-LrkiO88hjTAbZphjr0dNmMZNOHJfx0-RUX-Sq-AyvvZ");'></div>
+<div class="flex flex-col">
+<p class="font-bold text-text-primary-light dark:text-text-primary-dark">Analisis Data Penjualan Tahunan</p>
+<p class="mt-1 text-sm text-text-secondary-light dark:text-text-secondary-dark line-clamp-2">Visualisasi tren penjualan menggunakan Python dan Tableau untuk insight bisnis.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-4 z-20 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 flex h-20 items-center justify-around border-t border-border-light bg-surface-light/80 backdrop-blur-sm dark:border-border-dark dark:bg-surface-dark/80">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-xs font-medium">Dasbor</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-xs font-medium">Proyek</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-xs font-medium">Jaringan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-xs font-medium">Pesan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profil</span>
+</a>
+</nav>
+</div>
+</body></html>

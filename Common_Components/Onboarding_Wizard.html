@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careerforge Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ec80",
+            "background-light": "#f6f8f7",
+            "background-dark": "#102219",
+            "teal-primary": "#007B8A",
+            "neutral-bg": "#F2F4F7",
+            "neutral-text": "#344054",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root" style="background-image: radial-gradient(circle at top left, rgba(0, 123, 138, 0.2), transparent 40%), radial-gradient(circle at bottom right, rgba(19, 236, 128, 0.2), transparent 40%);">
+<div class="fixed inset-0 bg-black/60 z-10"></div>
+<div class="relative z-20 flex w-full max-w-lg flex-col overflow-hidden rounded-xl bg-neutral-bg shadow-2xl">
+<div class="flex items-center justify-between border-b border-gray-200 p-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="flex h-6 w-6 items-center justify-center rounded-full bg-teal-primary text-sm font-bold text-white">1</div>
+<p class="text-sm font-semibold text-teal-primary">Profil Dasar</p>
+</div>
+<div class="h-px w-8 bg-gray-300"></div>
+<div class="flex items-center gap-2 opacity-50">
+<div class="flex h-6 w-6 items-center justify-center rounded-full border-2 border-gray-300 text-sm font-bold text-gray-400">2</div>
+<p class="hidden text-sm font-semibold text-gray-400 sm:block">Keahlian</p>
+</div>
+<div class="h-px w-8 bg-gray-300"></div>
+<div class="flex items-center gap-2 opacity-50">
+<div class="flex h-6 w-6 items-center justify-center rounded-full border-2 border-gray-300 text-sm font-bold text-gray-400">3</div>
+<p class="hidden text-sm font-semibold text-gray-400 sm:block">Tujuan</p>
+</div>
+</div>
+<button class="grid h-8 w-8 place-items-center rounded-full text-neutral-text/60 transition-colors hover:bg-black/10">
+<span class="material-symbols-outlined text-2xl"> close </span>
+</button>
+</div>
+<div class="flex flex-col p-6">
+<div class="flex flex-col">
+<h1 class="text-neutral-text text-[28px] font-bold leading-tight tracking-tight">Selamat Datang di Careerforge!</h1>
+<p class="text-neutral-text/80 mt-1 text-base font-normal leading-normal">Mari kita siapkan profil dasar Anda untuk memulai.</p>
+</div>
+<div class="mt-8 flex flex-col gap-6">
+<div class="flex flex-col">
+<div class="flex flex-col items-center gap-6 rounded-lg border-2 border-dashed border-gray-300 px-6 py-10">
+<div class="flex max-w-[480px] flex-col items-center gap-2">
+<p class="text-neutral-text text-base font-bold leading-tight tracking-[-0.015em]">Upload Foto Profil</p>
+<p class="text-neutral-text/80 text-center text-sm font-normal leading-normal">Pilih dari galeri atau ambil foto baru.</p>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-teal-primary/10 text-teal-primary text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-teal-primary/20">
+<span class="material-symbols-outlined text-lg"> upload </span>
+<span class="truncate">Upload Foto</span>
+</button>
+</div>
+</div>
+<label class="flex flex-col">
+<p class="text-neutral-text pb-2 text-sm font-medium leading-normal">Nama Lengkap</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-white px-3.5 py-2.5 text-base font-normal leading-normal text-neutral-text placeholder:text-gray-400 focus:border-teal-primary focus:outline-0 focus:ring-2 focus:ring-teal-primary/20" placeholder="Masukkan nama lengkap Anda" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-neutral-text pb-2 text-sm font-medium leading-normal">Bio Singkat</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg border border-gray-300 bg-white px-3.5 py-2.5 text-base font-normal leading-normal text-neutral-text placeholder:text-gray-400 focus:border-teal-primary focus:outline-0 focus:ring-2 focus:ring-teal-primary/20" placeholder="Ceritakan sedikit tentang diri Anda..." rows="3"></textarea>
+</label>
+</div>
+</div>
+<div class="flex flex-col-reverse gap-3 border-t border-gray-200 bg-white/50 p-4 sm:flex-row sm:justify-end">
+<button class="flex h-11 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg px-5 text-neutral-text/80 text-base font-bold leading-normal transition-colors hover:bg-black/5">
+<span class="truncate">Lewati untuk Sekarang</span>
+</button>
+<button class="flex h-11 min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-teal-primary px-5 text-white text-base font-bold leading-normal transition-opacity hover:opacity-90">
+<span class="truncate">Lanjutkan</span>
+<span class="material-symbols-outlined"> arrow_forward </span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

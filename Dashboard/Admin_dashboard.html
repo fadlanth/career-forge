@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - Careerforge</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": {
+              DEFAULT: "#1E3A8A",
+              "light": "#3B82F6",
+              "dark": "#1E40AF"
+            },
+            "secondary": "#F59E0B",
+            "background-light": "#F9FAFB",
+            "background-dark": "#111827",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1F2937",
+            "text-primary-light": "#1F2937",
+            "text-primary-dark": "#F9FAFB",
+            "text-secondary-light": "#6B7280",
+            "text-secondary-dark": "#9CA3AF",
+            "border-light": "#E5E7EB",
+            "border-dark": "#374151"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .active .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 700,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col pb-24">
+<!-- Top App Bar -->
+<header class="flex items-center p-4 justify-between bg-card-light dark:bg-card-dark shadow-sm">
+<h1 class="text-xl font-bold leading-tight tracking-tight">Admin Dashboard</h1>
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-transparent text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</header>
+<main class="flex-1">
+<!-- Section Header: Global Statistics -->
+<h2 class="text-lg font-bold leading-tight px-4 pb-2 pt-6">Global Statistics</h2>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+<div class="flex flex-1 flex-col gap-2 rounded-lg p-4 bg-card-light dark:bg-card-dark shadow-sm border border-border-light dark:border-border-dark">
+<p class="text-base font-medium text-text-secondary-light dark:text-text-secondary-dark">Total Students</p>
+<p class="text-3xl font-bold tracking-tight">1,204</p>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-lg p-4 bg-card-light dark:bg-card-dark shadow-sm border border-border-light dark:border-border-dark">
+<p class="text-base font-medium text-text-secondary-light dark:text-text-secondary-dark">Total Projects</p>
+<p class="text-3xl font-bold tracking-tight">890</p>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-lg p-4 bg-card-light dark:bg-card-dark shadow-sm border border-border-light dark:border-border-dark sm:col-span-2 lg:col-span-1">
+<p class="text-base font-medium text-text-secondary-light dark:text-text-secondary-dark">Pending Verifications</p>
+<p class="text-3xl font-bold tracking-tight text-secondary">15</p>
+</div>
+</div>
+<!-- Section Header: Popular Skills -->
+<h2 class="text-lg font-bold leading-tight px-4 pb-2 pt-6">Popular Skills</h2>
+<!-- Chart -->
+<div class="px-4">
+<div class="flex min-w-72 flex-1 flex-col gap-4 rounded-lg border border-border-light dark:border-border-dark p-4 sm:p-6 bg-card-light dark:bg-card-dark shadow-sm">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-base font-medium">Top 10 Popular Skills</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Based on user profiles</p>
+</div>
+<div class="flex gap-1 items-center">
+<p class="text-sm font-medium text-primary">All Time</p>
+</div>
+</div>
+<div class="grid min-h-[220px] gap-x-4 gap-y-4 grid-cols-[auto_1fr] items-center py-2">
+<p class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">Leadership</p>
+<div class="h-2 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="bg-primary h-full rounded-full" style="width: 85%;"></div></div>
+<p class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">Python</p>
+<div class="h-2 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="bg-primary h-full rounded-full" style="width: 78%;"></div></div>
+<p class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">Project M.</p>
+<div class="h-2 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="bg-primary h-full rounded-full" style="width: 70%;"></div></div>
+<p class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">Data Analysis</p>
+<div class="h-2 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="bg-primary h-full rounded-full" style="width: 65%;"></div></div>
+<p class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">UI/UX Design</p>
+<div class="h-2 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="bg-primary h-full rounded-full" style="width: 50%;"></div></div>
+<p class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark">Marketing</p>
+<div class="h-2 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="bg-primary h-full rounded-full" style="width: 42%;"></div></div>
+</div>
+</div>
+</div>
+<!-- Section Header: Active Students -->
+<h2 class="text-lg font-bold leading-tight px-4 pb-2 pt-6">Most Active Students</h2>
+<!-- Data Table -->
+<div class="px-4">
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark shadow-sm overflow-hidden">
+<div class="flex flex-col">
+<div class="overflow-x-auto">
+<div class="inline-block min-w-full align-middle">
+<div class="overflow-hidden">
+<table class="min-w-full divide-y divide-border-light dark:divide-border-dark">
+<thead class="bg-gray-50 dark:bg-gray-800">
+<tr>
+<th class="py-3 pl-4 pr-3 text-left text-xs font-medium uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark" scope="col">Rank</th>
+<th class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark" scope="col">Student Name</th>
+<th class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wider text-text-secondary-light dark:text-text-secondary-dark text-right" scope="col">Projects</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light dark:divide-border-dark">
+<tr>
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium">1</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-full" data-alt="Student avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo3E8_ugtp8gw9nzkLpMNpsKyX1IDIw-K135TAe5h9FpVTRy7PhNaSy7LCnQ-gpRheq_4-lDnG3seXbvS8610BxiqYVf1d1o_27rKATutzPZUo9_fwbX2fx8TRHeXEmTQ7A3uyAwcynScoADftqyY3xdXwIZosPuhgxBJ0n0vgAXkljSGZFTOsNXNtef6o8669hAQIiBd5J8vvMvclkQQod0Bh33QxGOLjb0tXsKxYxMMZsWSeIKBWRsIPBccfcmW6mh_KrcLR6wvC"/>
+<div>Budi Hartono</div>
+</div>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-right font-semibold">25</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium">2</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-full" data-alt="Student avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0CDuM_r9Z1A6Ykj6U5Nm5e18EEFnYrQXpRXs_BzuEcIrgl-sP4EJSop1XmRgmr1SroPp8B3LtsWyGYViUAhc28GWM8kxl74mIRk8ogqaoMVtx-EE2JXuc4a_CGbULWakRF33snJcHFIbJk3jj8MESRqHcW_ejeS4H0owgtmFbhBOTOfR0U46Qgjpt8VFWExSacjHAoUlbzs3ZXlJ8QOWSxpuptqHZdY4BOZ0OnykTLn-qPeeQ9_Ebq7qRVnVCgMJtaslvqE7YNr8m"/>
+<div>Citra Dewi</div>
+</div>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-right font-semibold">22</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium">3</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-full" data-alt="Student avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaalgNV-5MobGlBUoHHgNDwfnWeXbAKgZMIchFw94IX1FPII_t43227Vg8wD_Pf7fOs6zWdZsaj9HaQATsDmwW1xBmQKI95MYduRgHGlhrqiYkmEvVq1_T5uJvYpHgtOB_8uew5nZTCWBWAlM4sbGmCOZGPYWXxjY0TNqLFr_BXqfQ3n9N8A3J9CkLwXt1xpM3N-TlnsxaQmkWZJuq7sr4rUOnLkRv6St1PWyLDRhXOK5GIXEx_yytnG0ck2D4W1k8derhJsSLd_s1"/>
+<div>Agus Wijaya</div>
+</div>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-right font-semibold">19</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium">4</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-full" data-alt="Student avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFOvL0_WpyyIu0ZWHcPxwYoFiPGHhupDpHx1GpdgHnkeo5JDYERmRt5IWlCJcjIf0zWZZlKYQ0psEGaINMAkMPjVrOs8JoWyhnO3zbZhGHhZP9_pflL4DNS7EUdjdcPTkMhDqJerIsrDUDv-yTpInqcCCndxHUkuHsV08_w651HHjVkB4wte4n5HEh3QTmDGHW4r93UsigkWaoV6ga6fgNsAHXc1DZHcjkyMgd2oZjdJJUdhigP3n4Edvhp1VOzyejt_L-S1ID_WwL"/>
+<div>Siti Aminah</div>
+</div>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-right font-semibold">18</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium">5</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm">
+<div class="flex items-center gap-3">
+<img class="h-8 w-8 rounded-full" data-alt="Student avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkI1sKsTSl2XMREZBHWwmZGDn3_jTQvBtg0UJDDTrta9qmCWgNae6UmEa0bk6zP-cY3ybkYz9xYnstbeyB5jdwieXyMKX8OJaR1qLwRNs9z3_WdHho0QHN9LaDDNf5_tyCK4XDu_jYWvPgx2tJJ4g6BYzmdqL1ijZmHzfH2Dnbdtd5b0BPKkvFEGPi6vzQK5VHs06V8ErNN_ouUW_emtVeDw5PUSAiPgvSlKybKMIsTGAMAXPYOyRelhWLeCHr9T2C4_5kwckSMjAT"/>
+<div>Eko Prasetyo</div>
+</div>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-right font-semibold">15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 h-16 bg-card-light dark:bg-card-dark border-t border-border-light dark:border-border-dark flex justify-around items-center z-50">
+<a class="flex flex-col items-center justify-center w-full text-primary active" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-xs font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary-light" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-xs">Users</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary-light" href="#">
+<span class="material-symbols-outlined">folder_managed</span>
+<span class="text-xs">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary-light" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs">Settings</span>
+</a>
+</nav>
+</div>
+</body></html>

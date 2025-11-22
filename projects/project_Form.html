@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tambah Proyek Baru - Careerforge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#48BB78",
+              "background-light": "#F7FAFC",
+              "background-dark": "#102219",
+              "text-light": "#2D3748",
+              "text-dark": "#E2E8F0",
+              "text-muted-light": "#718096",
+              "text-muted-dark": "#A0AEC0",
+              "border-light": "#E2E8F0",
+              "border-dark": "#4A5568",
+              "input-bg-light": "#FFFFFF",
+              "input-bg-dark": "#2D3748",
+              "error": "#E53E3E"
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem", 
+                "lg": "0.5rem", 
+                "xl": "0.75rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex h-16 items-center border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h1 class="text-lg font-bold flex-1 text-center">Tambah Proyek Baru</h1>
+<div class="w-10"></div> <!-- Spacer -->
+</header>
+<!-- Form Content -->
+<main class="flex flex-1 flex-col p-4 pb-24">
+<div class="flex w-full flex-col gap-6">
+<!-- Nama Proyek -->
+<label class="flex flex-col w-full">
+<p class="text-base font-medium pb-2">Nama Proyek</p>
+<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-input-bg-light dark:bg-input-bg-dark h-14 p-4 text-base font-normal placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="Contoh: Aplikasi Manajemen Tugas" value=""/>
+</label>
+<!-- URL Proyek -->
+<label class="flex flex-col w-full">
+<p class="text-base font-medium pb-2">URL Proyek <span class="text-text-muted-light dark:text-text-muted-dark">(Opsional)</span></p>
+<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-input-bg-light dark:bg-input-bg-dark h-14 p-4 text-base font-normal placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:border-primary focus:ring-2 focus:ring-primary/20" placeholder="https://proyekanda.com" value=""/>
+</label>
+<!-- Dropzone -->
+<div class="flex flex-col w-full">
+<p class="text-base font-medium pb-2">Thumbnail Proyek</p>
+<div class="flex flex-col items-center gap-4 rounded-xl border-2 border-dashed border-border-light dark:border-border-dark px-6 py-10 text-center">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">upload_file</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold text-text-light dark:text-text-dark">Unggah Thumbnail Proyek</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Seret &amp; lepas atau klik untuk memilih. Rasio 16:9 disarankan.</p>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold">
+<span>Pilih File</span>
+</button>
+</div>
+</div>
+<!-- Rich Text Editor -->
+<div class="flex flex-col w-full">
+<p class="text-base font-medium pb-2">Deskripsi Proyek</p>
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-input-bg-light dark:bg-input-bg-dark overflow-hidden focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+<div class="flex items-center gap-2 border-b border-border-light dark:border-border-dark p-2">
+<button class="flex size-8 items-center justify-center rounded hover:bg-black/5 dark:hover:bg-white/5"><span class="material-symbols-outlined text-xl">format_bold</span></button>
+<button class="flex size-8 items-center justify-center rounded hover:bg-black/5 dark:hover:bg-white/5"><span class="material-symbols-outlined text-xl">format_italic</span></button>
+<button class="flex size-8 items-center justify-center rounded hover:bg-black/5 dark:hover:bg-white/5"><span class="material-symbols-outlined text-xl">format_list_bulleted</span></button>
+<button class="flex size-8 items-center justify-center rounded hover:bg-black/5 dark:hover:bg-white/5"><span class="material-symbols-outlined text-xl">link</span></button>
+</div>
+<textarea class="form-textarea w-full resize-none border-0 bg-transparent min-h-48 p-4 text-base font-normal placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-0" placeholder="Jelaskan proyek Anda secara detail..."></textarea>
+</div>
+</div>
+<!-- Tag Input -->
+<div class="flex flex-col w-full">
+<p class="text-base font-medium pb-2">Tech Stack / Keterampilan</p>
+<div class="flex flex-wrap items-center gap-2 rounded-lg border border-border-light dark:border-border-dark bg-input-bg-light dark:bg-input-bg-dark p-2 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+<span class="flex items-center gap-1.5 rounded-md bg-primary/20 px-2.5 py-1 text-sm font-medium text-primary">
+                        React
+                        <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined !text-base">close</span></button>
+</span>
+<span class="flex items-center gap-1.5 rounded-md bg-primary/20 px-2.5 py-1 text-sm font-medium text-primary">
+                        Tailwind CSS
+                        <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined !text-base">close</span></button>
+</span>
+<span class="flex items-center gap-1.5 rounded-md bg-primary/20 px-2.5 py-1 text-sm font-medium text-primary">
+                        Node.js
+                        <button class="text-primary/70 hover:text-primary"><span class="material-symbols-outlined !text-base">close</span></button>
+</span>
+<input class="form-input flex-1 border-0 bg-transparent p-2 text-base font-normal placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-0" placeholder="Tambahkan teknologi..."/>
+</div>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark pt-2">Pisahkan dengan koma atau tekan Enter untuk menambahkan.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Action Buttons -->
+<footer class="fixed bottom-0 left-0 right-0 z-10 flex items-center justify-end gap-3 border-t border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-4">
+<button class="flex min-w-[84px] max-w-[480px] flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 border border-primary text-primary text-base font-bold leading-normal tracking-wide">
+<span class="truncate">Simpan sebagai Draf</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-wide">
+<span class="truncate">Terbitkan</span>
+</button>
+</footer>
+</div>
+</body></html>
