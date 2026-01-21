@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.js",
+      "src": "careerforge-app/server/app.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "app.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "app.js"
+      "dest": "careerforge-app/server/app.js"
     }
   ]
-}  
+}
