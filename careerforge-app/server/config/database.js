@@ -1,16 +1,22 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
-// Vercel akan membaca DATABASE_URL dari environment variables yang kamu input
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
+const dbUrl = process.env.DATABASE_URL;
+
+// Cek apakah URL ada sebelum diproses oleh Sequelize
+if (!dbUrl) {
+  throw new Error("DATABASE_URL is not defined! Check Vercel Environment Variables.");
+}
+
+const sequelize = new Sequelize(dbUrl, {
   dialect: 'postgres',
-  protocol: 'postgres',
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: false // Penting agar bisa konek ke Supabase
+      rejectUnauthorized: false // Wajib untuk Supabase di Vercel
     }
-  }
+  },
+  logging: false 
 });
 
 module.exports = sequelize;
