@@ -1,14 +1,14 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const sequelize = require("./config/database");
+const sequelize = require("../config/database");
 
 // --- 1. IMPORT MODEL ---
-const User = require("./models/User");
-const Profile = require("./models/Profile");
-const Project = require("./models/Project");
-const Skill = require("./models/Skill");
-const Certificate = require("./models/Certificate");
+const User = require("../models/User");
+const Profile = require("../models/Profile");
+const Project = require("../models/Project");
+const Skill = require("../models/Skill");
+const Certificate = require("../models/Certificate");
 
 const app = express();
 
